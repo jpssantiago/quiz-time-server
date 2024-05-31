@@ -5,6 +5,8 @@ import { connectToDatabase } from "./services/mongodb-service"
 const app = fastify()
 connectToDatabase()
 
+app.register(import("./routes/quiz/quiz"))
+
 app.listen({
     port: 3333,
     host: "0.0.0.0"
