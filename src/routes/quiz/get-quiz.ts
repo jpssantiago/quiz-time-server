@@ -18,5 +18,6 @@ export async function getQuiz(request: FastifyRequest, response: FastifyReply) {
         return response.code(404).send({ err: "quiz does not exist" })
     }
     
+    delete (quiz as {password?: string}).password
     return response.send({ ...quiz })
 }
