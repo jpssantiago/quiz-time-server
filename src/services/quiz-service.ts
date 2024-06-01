@@ -11,7 +11,6 @@ export async function getQuizById(id: string): Promise<Quiz | null> {
         
         return (document as unknown) as Quiz
     } catch (err) {
-        console.error(err)
         return null
     }
 }
