@@ -2,9 +2,11 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.ts",
   "scripts": {
-    "dev": "tsx watch --env-file .env src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +15,7 @@
     "@fastify/cors": "^9.0.1",
     "@types/bcrypt": "^5.0.2",
     "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
     "fastify": "^4.27.0",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.7.0",
