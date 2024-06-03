@@ -9,7 +9,6 @@ connectToDatabase()
 
 app.register(cors)
 app.register(import("./routes/quiz/quiz"))
-app.register(import("./routes/creator/creator"))
 
 app.listen({
     port: env.PORT,
